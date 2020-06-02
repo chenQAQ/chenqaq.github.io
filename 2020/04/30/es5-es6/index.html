@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   
-  <title>es5,es6 | blog</title>
-  <meta name="author" content="John Doe" />
+  <title>ES5 | blog</title>
+  <meta name="author" content="luo" />
 
   
-  <meta name="description" content="ES512asdeeeeeeeeedasdasdasdsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" />
+  <meta name="description" content="个人对ES5做简单的学习和介绍。。" />
   
 
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  <meta property="og:title" content="es5,es6" />
+  <meta property="og:title" content="ES5" />
   <meta property="og:site_name" content="blog" />
 
   
@@ -39,9 +39,7 @@
 
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-
-<body>
-  <header id="header" class="inner"><div class="alignleft">
+<header id="header" class="inner"><div class="alignleft">
   <h1><a href="/">blog</a></h1>
   <h2><a href="/"></a></h2>
 </div>
@@ -56,8 +54,11 @@
   <div class="clearfix"></div>
 </nav>
 <div class="clearfix"></div></header>
+
+
+<body>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post ">
   
   <div class="post-content">
     <header>
@@ -67,70 +68,65 @@
       
       
   
-    <h1 class="title">es5,es6</h1>
+    <h1 class="title">ES5</h1>
   
 
     </header>
     <div class="entry">
       
-        <h1 id="ES5"><a href="#ES5" class="headerlink" title="ES5"></a>ES5</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">asdeeeeeeeee</span><br><span class="line">dasdasdasdsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</span><br></pre></td></tr></table></figure>
+        <p>个人对ES5做简单的学习和介绍。。</p>
+<a id="more"></a>
+
+<blockquote>
+<h3 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h3></blockquote>
+<p><strong>为什么？</strong></p>
+<ol>
+<li>消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为</li>
+<li>提高编译效率</li>
+</ol>
+<p><strong>怎么做？</strong></p>
+<ol>
+<li>在全局或函数内第一行书写”use strict”</li>
+<li>必须用var声明变量</li>
+<li>禁止自定义的函数中的this指向window</li>
+<li>创建eval作用域</li>
+<li>对象不能有重名的属性</li>
+</ol>
+<blockquote>
+<h3 id="JSON对象"><a href="#JSON对象" class="headerlink" title="JSON对象"></a>JSON对象</h3></blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">JSON</span>.stringify(obj/arr)</span><br><span class="line"><span class="comment">//将对象转化为JSON字符串</span></span><br><span class="line">a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] ---&gt; <span class="built_in">JSON</span>.stringify(a) <span class="comment">// "[1,2,3]"  </span></span><br><span class="line">a=&#123;<span class="string">"can"</span>:<span class="string">'one'</span>,<span class="number">2</span>:<span class="string">'two'</span>&#125; ---&gt; <span class="built_in">JSON</span>.stringify(a) <span class="comment">// "&#123;"can":"one","2":"two"&#125;"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">JSON</span>.parse(obj/arr)</span><br><span class="line"><span class="comment">//JSON字符串转换成对象</span></span><br><span class="line">a=<span class="string">"["</span><span class="number">1</span><span class="string">","</span><span class="number">2</span><span class="string">","</span><span class="number">3</span><span class="string">"]"</span> ---&gt; <span class="built_in">JSON</span>.parse(a) <span class="comment">// [1,2,3]</span></span><br><span class="line"><span class="comment">//   ！！！键值必须使用双引号包裹！！！</span></span><br><span class="line">a=<span class="string">"['1','2','3']"</span> ---&gt; <span class="built_in">JSON</span>.parse(a) <span class="comment">// Uncaught SyntaxError: Unexpected token ' in JSON</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="Array扩展"><a href="#Array扩展" class="headerlink" title="Array扩展"></a>Array扩展</h3></blockquote>
+<ol>
+<li>Array.prototype.indexOf(value) : 得到值在数组中的第一个下标</li>
+<li>Array.prototype.lastIndexOf(value) : 得到值在数组中的最后一个下标</li>
+<li>Array.prototype.forEach(function(item, index){}) : 遍历数组</li>
+<li>Array.prototype.map(function(item, index){}) : 遍历数组返回一个新的数组，返回加工之后的值</li>
+<li>Array.prototype.filter(function(item, index){}) : 遍历过滤出一个新的子数组， 返回条件为true的值</li>
+</ol>
+<blockquote>
+<h3 id="Object扩展"><a href="#Object扩展" class="headerlink" title="Object扩展"></a>Object扩展</h3></blockquote>
 
       
     </div>
     
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
+
   </div>
 </article>
 
 
 
 </div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:yoursite.com">
-  </form>
-</div>
-
-  
-
-  
-<div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
-  <ul class="entry">
     
-      <li>
-        <a href="/2020/04/30/es5-es6/">es5,es6</a>
-      </li>
-    
-      <li>
-        <a href="/2020/04/30/hello-world/">Hello World</a>
-      </li>
-    
-  </ul>
-</div>
-
-
-  
-
-  
-</aside>
     <div class="clearfix"></div>
   </div>
+</body>
+
   <footer id="footer" class="inner"><div class="alignleft">
   <p>
   
-  &copy; 2020 John Doe
+  &copy; 2020 luo
   
   All rights reserved.</p>
   <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
@@ -152,5 +148,4 @@
 
 
 <div id='bg'></div>
-</body>
 </html>
