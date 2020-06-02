@@ -13,6 +13,7 @@ body {
   color: #c6c9cf;
   font-size: 14px;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  background-color: #141414;
 }
 @media screen and (max-width: 1260px) {
   body {
@@ -99,21 +100,6 @@ a:hover {
     margin-right: 0;
   }
 }
-#bg {
-  background-color: #141414;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
 #header {
   margin: 50px auto;
 }
@@ -156,8 +142,39 @@ article.page {
 article.page .icon {
   display: none;
 }
+article.post-content-index {
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  -ms-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+}
+article.post-content-index:hover {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  transform: scale(1.04);
+}
 article.post .icon:before {
   content: '\f016';
+}
+article#content-archive {
+  border-radius: 0px;
+}
+article#content-archive .post-content {
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  -ms-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+}
+article#content-archive .post-content:hover {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  transform: scale(1.04);
 }
 article.photo .icon:before {
   content: '\f030';
@@ -438,12 +455,14 @@ article .entry .pullquote {
 article footer {
   margin-top: 15px;
   padding-top: 10px;
-  border-top: 1px dotted #ddd;
   color: #c6c9cf;
   font-size: 0.9em;
   line-height: 16px;
   position: relative;
   min-height: 16px;
+}
+article footer > div {
+  float: right;
 }
 article footer a {
   color: #c6c9cf;
@@ -633,6 +652,18 @@ article footer .addthis iframe {
 }
 #sidebar .search {
   margin-bottom: 30px;
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  -ms-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+}
+#sidebar .search:hover {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  transform: scale(1.04);
 }
 #sidebar .search input {
   background: rgba(136,136,136,0.1);
@@ -650,6 +681,20 @@ article footer .addthis iframe {
 }
 #sidebar .search input:focus {
   color: #ddd;
+}
+#sidebar .tag {
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  -ms-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+}
+#sidebar .tag:hover {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  transform: scale(1.04);
 }
 #sidebar .tag small {
   margin-left: 15px;
@@ -786,7 +831,7 @@ pre .css .tag,
 pre .request,
 pre .status,
 pre .nginx .title {
-  color: #859900;
+  color: #d21158;
 }
 pre .number,
 pre .command,
