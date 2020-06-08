@@ -80,29 +80,29 @@
 <blockquote>
 <h3 id="String拓展-还有很多，只是我过滤了现阶段不需要的"><a href="#String拓展-还有很多，只是我过滤了现阶段不需要的" class="headerlink" title="String拓展(还有很多，只是我过滤了现阶段不需要的)"></a>String拓展(还有很多，只是我过滤了现阶段不需要的)</h3></blockquote>
 <ol>
-<li><p>String.prototype.<font color=#00aaaa>includes</font>(str)：返回布尔值，表示是否找到了参数字符串。</p>
+<li><p><strong>String.prototype.<font color=#00aaaa>includes</font>(str)</strong> ：返回布尔值，表示是否找到了参数字符串。</p>
 </li>
-<li><p>String.prototype.<font color=#00aaaa>startsWith()</font>(str)：返回布尔值，表示参数字符串是否在原字符串的头部。</p>
+<li><p><strong>String.prototype.<font color=#00aaaa>startsWith()</font>(str)</strong> ：返回布尔值，表示参数字符串是否在原字符串的头部。</p>
 </li>
-<li><p>String.prototype.<font color=#00aaaa>endsWith</font>(str)：返回布尔值，表示参数字符串是否在原字符串的尾部。</p>
+<li><p><strong>String.prototype.<font color=#00aaaa>endsWith</font>(str)</strong> ：返回布尔值，表示参数字符串是否在原字符串的尾部。</p>
 </li>
-<li><p>String.prototype.<font color=#00aaaa>repeat</font>(num)：返回一个新字符串，表示将原字符串重复n次。   </p>
+<li><p><strong>String.prototype.<font color=#00aaaa>repeat</font>(num)</strong> ：返回一个新字符串，表示将原字符串重复n次。   </p>
 <ol>
 <li>num有小数点—-&gt;取整   </li>
 <li>num为负数或者为Infinity(超出JavaScript处理范围的数值)—-&gt;报错</li>
 </ol>
 </li>
-<li><p>String.prototype.<font color=#00aaaa>padStart</font>(num,str):字符串如果不够指定长度，会在前面补全str   </p>
+<li><p><strong>String.prototype.<font color=#00aaaa>padStart</font>(num,str)</strong> : 字符串如果不够指定长度，会在前面补全str   </p>
 <ul>
 <li>num:指定长度</li>
 <li>str:需要补全的字符串</li>
 </ul>
 </li>
-<li><p>String.prototype.<font color=#00aaaa>padEnd</font>(num,str):在后面补全str</p>
+<li><p><strong>String.prototype.<font color=#00aaaa>padEnd</font>(num,str)</strong> : 在后面补全str</p>
 </li>
-<li><p>String.prototype.<font color=#00aaaa>trimStart():</font><br>消除字符串头部的空格,并且返回一个新的字符串</p>
+<li><p><strong>String.prototype.<font color=#00aaaa>trimStart()</strong> </font>:<br>消除字符串头部的空格,并且返回一个新的字符串</p>
 </li>
-<li><p>String.prototype.<font color=#00aaaa>trimEnd()</font>:消除字符串尾部的空格,并且返回一个新的字符串</p>
+<li><p><strong>String.prototype.<font color=#00aaaa>trimEnd()</font></strong> ：消除字符串尾部的空格,并且返回一个新的字符串</p>
 </li>
 </ol>
 <blockquote>
@@ -115,16 +115,18 @@
 </ol>
 <blockquote>
 <h3 id="Proxy-拦截器"><a href="#Proxy-拦截器" class="headerlink" title="Proxy(拦截器)"></a>Proxy(拦截器)</h3></blockquote>
-<h5 id="在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此可以通过Proxy对外界的访问进行过滤和改写"><a href="#在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此可以通过Proxy对外界的访问进行过滤和改写" class="headerlink" title="在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此可以通过Proxy对外界的访问进行过滤和改写"></a>在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此可以通过Proxy对外界的访问进行过滤和改写</h5><blockquote>
-<blockquote>
-<p>Proxy 支持的拦截操作</p>
-</blockquote>
-</blockquote>
+<h5 id="在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此可以通过Proxy对外界的访问进行过滤和改写"><a href="#在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此可以通过Proxy对外界的访问进行过滤和改写" class="headerlink" title="在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此可以通过Proxy对外界的访问进行过滤和改写"></a>在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此可以通过Proxy对外界的访问进行过滤和改写</h5><h4 id="Proxy-支持的拦截操作"><a href="#Proxy-支持的拦截操作" class="headerlink" title="Proxy 支持的拦截操作"></a>Proxy 支持的拦截操作</h4><ul>
+<li>target：所拦截的目标对象</li>
+<li>propKey：所要访问的属性名</li>
+<li>value：属性值</li>
+</ul>
 <ol>
-<li>123</li>
-<li>321</li>
-<li>333</li>
-<li>444</li>
+<li><strong>get(target, propKey, receiver)</strong> ：拦截对象属性的读取</li>
+<li><strong>set(target, propKey, value, receiver)</strong> ：拦截对象属性的设置</li>
+<li><strong>has(target, propKey)</strong> ：拦截<font color=#ff077690>propKey in proxy</font>的操作，返回一个布尔值</li>
+<li><strong>deleteProperty(target, propKey)</strong> ：拦截<font color=#ff077690>delete proxy[proKey]</font><br>的操作，返回一个布尔值。</li>
+<li><strong>ownKeys(target)</strong> ：拦截<font color=#ff077690>Object.getOwnPropertyNames(proxy)</font>、<font color=#ff077690>Object.getOwnPropertySymbols(proxy)</font>、<font color=#ff077690>Object.keys(proxy)</font><br>、<font color=#ff077690>for…in</font><br>循环，返回一个数组。该方法返回目标对象所有自身的属性的属性名，而</li>
+<li></li>
 </ol>
 
       
